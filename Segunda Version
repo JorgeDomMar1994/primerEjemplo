@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulario</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src='app.js'></script>
+</head>
+<body>
+    <section>
+        <fieldset>
+            <form name="formulario" id="formulario" action="#" method="get">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Jorge" pattern="[A-ZÑÁÉÍÓÚ][a-zñáéíóú]{2,}(\s[A-ZÑÁÉÍÓÚ][a-zñáéíóú]{2,}|)" autofocus="autofocus" required />
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Domínguez Martín" pattern="[A-ZÑÁÉÍÓÚ][a-zñáéíóú]{7,}[\s][A-ZÑÁÉÍÓÚ][a-zñáéíóú]{7,}" required />
+
+                <label for="email">E-mail:</label>
+                <input name="email" type="email" id="email" placeholder="jorge@gmail.com" required />
+
+                <label for="pasaporte">Pasaporte:</label>
+                <input type="text" name="pasaporte" id="pasaporte" placeholder="AAA-12345BB" pattern="[A-ZÁÉÍÓÚÑ]{3}[-]?[0-9]{3,5}[a-zA-ZñáéíóúÑÁÉÍÓÚ]{2}" required>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" name="fecha" id="fecha" required>
+
+                <label for="billete">Tipo billete:</label>
+                <input type="radio" name="billete" value="turista" checked>
+                <label for="turista">Turista</label><br>
+                <input type="radio" name="billete" value="preferente">
+                <label for="preferente">Preferente</label><br>
+
+                <label for="destino">Destino:</label>
+                <select name="destino" id="destino">
+                  <option value="Brasil">Brasil</option>
+                  <option value="Arabia">Arabia</option>
+                  <option value="Cuba">Cuba</option>
+                </select><br>
+
+                <input type="reset" name="limpiar" id="btnClear" value="Limpiar" />
+                <input type="submit" name="enviar" id="btnEnviar" value="Enviar" />
+            </form>
+        </fieldset>
+    </section>
+</body>
+</html>
